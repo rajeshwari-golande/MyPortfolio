@@ -93,7 +93,18 @@ npm run dev
 
 ## Docker Setup
 
-Three containers are defined in `docker-compose.yml`:
+**Local development:**
+```bash
+docker compose up --build
+```
+
+**Production (Oracle Cloud / any Linux VM):**
+```bash
+cp .env.production.example .env   # edit with your IP, passwords, API key
+docker compose -f docker-compose.prod.yml up -d --build
+```
+
+See **[docs/ORACLE-FREE-DEPLOY.md](docs/ORACLE-FREE-DEPLOY.md)** for the full free deployment guide.
 
 | Container | Image | Port | Purpose |
 |-----------|-------|------|---------|

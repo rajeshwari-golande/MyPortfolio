@@ -1,0 +1,14 @@
+# Production reverse proxy — routes / to frontend, /api/* to backend
+# Set SITE_ADDRESS=:80 for IP-only, or SITE_ADDRESS=yourdomain.com for auto HTTPS
+
+{
+	email {$ACME_EMAIL:admin@example.com}
+}
+
+{$SITE_ADDRESS::80} {
+	@api path /api/* /health /docs /docs/* /openapi.json /redoc /redoc/*
+	handle @api {
+		reverse_proxy backend:8000
+	}
+	reverse_proxy frontend:3000
+}
