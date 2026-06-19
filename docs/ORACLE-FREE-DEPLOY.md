@@ -108,7 +108,7 @@ NEXT_PUBLIC_API_URL=http://150.136.12.34
 POSTGRES_USER=portfolio
 POSTGRES_PASSWORD=MyStr0ngP@ssw0rd2026!
 POSTGRES_DB=portfolio
-GEMINI_API_KEY=AIzaSy...your_key
+GEMINI_API_KEY=your_gemini_api_key_here
 CORS_ORIGINS=http://150.136.12.34
 # DOMAIN=   (leave empty for IP-only)
 ```

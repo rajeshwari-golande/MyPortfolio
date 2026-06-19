@@ -118,16 +118,11 @@ See **[docs/ORACLE-FREE-DEPLOY.md](docs/ORACLE-FREE-DEPLOY.md)** for the full fr
 
 ## Deployment Guide
 
-See [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md) for detailed AWS EC2 deployment instructions.
+**No credit card (recommended):** [docs/DEPLOY-FREE-NO-CARD.md](docs/DEPLOY-FREE-NO-CARD.md) — Vercel + Neon + Render
 
-**Summary:**
-1. Launch EC2 instance (t3.medium recommended)
-2. Install Docker and Docker Compose
-3. Configure security groups (80, 443, 22)
-4. Clone repository and set environment variables
-5. Run `docker compose up -d --build`
-6. Configure Nginx reverse proxy with SSL (Let's Encrypt)
-7. Upload resume PDF and project screenshots to S3
+**Oracle Cloud (requires card):** [docs/ORACLE-FREE-DEPLOY.md](docs/ORACLE-FREE-DEPLOY.md) — Docker Compose on free VM
+
+**AWS EC2:** [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md)
 
 ## API Documentation
 

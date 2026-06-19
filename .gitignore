@@ -3,9 +3,18 @@ node_modules/
 venv/
 __pycache__/
 *.pyc
+# Environment files (never commit real secrets)
 .env
 .env.local
+.env.production
+.env.deploy
 .env*.local
+backend/.env
+frontend/.env.local
+!.env.example
+!.env.production.example
+!.env.deploy.example
+backend/.env.example
 
 # Build
 frontend/.next/

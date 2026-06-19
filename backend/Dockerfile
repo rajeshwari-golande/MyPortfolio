@@ -13,6 +13,7 @@ COPY . .
 
 RUN mkdir -p /app/data/faiss_index /app/data/documents
 
+ENV PORT=8000
 EXPOSE 8000
 
-CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]
+CMD ["sh", "-c", "uvicorn app.main:app --host 0.0.0.0 --port ${PORT}"]
