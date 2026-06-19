@@ -1,0 +1,131 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0f172a;
+  --foreground: #f8fafc;
+  --muted: #94a3b8;
+  --accent: #facc15;
+  --accent-red: #dc2626;
+  --surface: #1e293b;
+  --surface-hover: #334155;
+  --border: #334155;
+}
+
+html.light {
+  --background: #f8fafc;
+  --foreground: #0f172a;
+  --muted: #64748b;
+  --accent: #ca8a04;
+  --accent-red: #dc2626;
+  --surface: #f1f5f9;
+  --surface-hover: #e2e8f0;
+  --border: #cbd5e1;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-accent-red: var(--accent-red);
+  --color-surface: var(--surface);
+  --color-surface-hover: var(--surface-hover);
+  --color-border: var(--border);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--accent) 35%, transparent);
+  color: var(--foreground);
+}
+
+.section-container {
+  @apply mx-auto max-w-6xl px-4 sm:px-6 lg:px-8;
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #facc15 0%, #fde68a 50%, #facc15 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+html.light .gradient-text {
+  background: linear-gradient(135deg, #ca8a04 0%, #eab308 50%, #ca8a04 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.grid-pattern {
+  background-image:
+    linear-gradient(rgba(250, 204, 21, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(250, 204, 21, 0.03) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+html.light .grid-pattern {
+  background-image:
+    linear-gradient(rgba(202, 138, 4, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(202, 138, 4, 0.06) 1px, transparent 1px);
+}
+
+.card-glow {
+  box-shadow:
+    0 0 0 1px rgba(51, 65, 85, 0.8),
+    0 4px 24px rgba(0, 0, 0, 0.25);
+}
+
+.card-glow:hover {
+  box-shadow:
+    0 0 0 1px rgba(250, 204, 21, 0.25),
+    0 8px 32px rgba(0, 0, 0, 0.35);
+}
+
+html.light .card-glow {
+  box-shadow:
+    0 0 0 1px rgba(203, 213, 225, 0.9),
+    0 4px 24px rgba(0, 0, 0, 0.06);
+}
+
+html.light .card-glow:hover {
+  box-shadow:
+    0 0 0 1px rgba(202, 138, 4, 0.3),
+    0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.prose-portfolio h2 {
+  @apply text-xl font-semibold text-foreground mt-8 mb-4;
+}
+
+.prose-portfolio h3 {
+  @apply text-lg font-medium text-foreground mt-6 mb-3;
+}
+
+.prose-portfolio p {
+  @apply text-muted leading-relaxed mb-4;
+}
+
+.prose-portfolio ul {
+  @apply list-disc list-inside text-muted space-y-2 mb-4;
+}
+
+.prose-portfolio code {
+  @apply bg-surface px-1.5 py-0.5 rounded text-accent text-sm font-mono;
+}
+
+.prose-portfolio pre {
+  @apply bg-surface p-4 rounded-lg overflow-x-auto mb-4 border border-border;
+}

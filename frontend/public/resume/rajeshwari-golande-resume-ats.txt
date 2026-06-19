@@ -1,0 +1,58 @@
+RAJESHWARI GOLANDE
+Python Backend Engineer | AI/ML Engineer | DevOps Enthusiast
+Email: rajeshwari.golande@email.com | LinkedIn: linkedin.com/in/rajeshwari-golande | GitHub: github.com/rajeshwari-golande
+Pune, Maharashtra, India | Available: June 2026
+
+SUMMARY
+Python Backend Engineer with expertise in FastAPI, PostgreSQL, AI/ML (RAG, LangChain, FAISS), and DevOps (Docker, AWS). Experienced in building production-grade backend systems and AI-powered applications through internships at PTC and ACTDBI. Seeking Software Engineering, Backend Engineering, or AI/ML Engineering roles.
+
+EXPERIENCE
+
+PTC | ML DevOps Intern | May 2025 - Aug 2025 | Remote
+- Built and maintained CI/CD pipelines for ML model deployment using Docker and GitHub Actions
+- Containerized ML inference services reducing deployment time by 60%
+- Implemented automated rollback mechanism for production ML systems
+- Technologies: Python, Docker, GitHub Actions, Kubernetes, MLflow, AWS, Linux
+
+ACTDBI | Data Analytics / ML Intern | Jan 2025 - Apr 2025 | Pune, India
+- Developed data pipelines and predictive models using Python and Scikit-Learn
+- Optimized SQL queries improving performance by 45%
+- Built churn prediction model achieving 87% accuracy
+- Technologies: Python, Pandas, Scikit-Learn, SQL, PostgreSQL, Jupyter
+
+EDUCATION
+Pimpri Chinchwad College of Engineering (PCCOE) | B.E. Computer Engineering | 2022 - 2026
+Relevant Coursework: Data Structures and Algorithms, DBMS, Operating Systems, Computer Networks, Machine Learning, Artificial Intelligence
+
+PROJECTS
+
+FinSight AI | Enterprise Financial Research Assistant
+- Built RAG-powered financial research platform with FastAPI, LangChain, FAISS, and Gemini API
+- Achieved 92% MRR@5 retrieval accuracy with sub-2s query latency
+- Tech: Python, FastAPI, Next.js, PostgreSQL, LangChain, FAISS, Docker, AWS S3
+
+MLOpsHub | Automated ML Lifecycle Platform
+- Designed ML lifecycle platform with experiment tracking, model registry, and automated deployment
+- Reduced deployment time to under 3 minutes with 98% pipeline success rate
+- Tech: Python, FastAPI, PostgreSQL, Docker, GitHub Actions, AWS S3
+
+InterviewAI | AI-Powered Coding Interview Platform
+- Built adaptive coding interview platform with AI feedback and sandboxed code execution
+- Served 500+ users with 15K+ problems solved
+- Tech: Python, FastAPI, Next.js, PostgreSQL, Docker, Gemini API, Redis
+
+SKILLS
+Languages: Python, SQL, C++
+Backend: FastAPI, REST APIs, Authentication, JWT
+Databases: PostgreSQL, MySQL
+AI/ML: Scikit-Learn, LLMs, RAG, LangChain, FAISS
+Cloud: AWS EC2, AWS S3
+DevOps: Docker, Docker Compose, GitHub Actions, Linux
+Concepts: System Design, OOP, Microservices
+
+ACHIEVEMENTS
+- LeetCode: 350+ problems solved, Top 15% globally
+- CodeChef: 3-Star Rating
+- Smart India Hackathon 2025: National Finalist (FinTech track)
+- HackPCCOE 2024: 1st Place (AI/ML category)
+- AWS Cloud Practitioner Certification (2025)
