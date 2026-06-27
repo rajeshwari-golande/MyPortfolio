@@ -27,21 +27,24 @@ def build_vectorstore():
     if not embeddings:
         return None
 
-    docs = [
-        Document(page_content=d["content"], metadata={"source": d["source"]})
-        for d in PORTFOLIO_DOCUMENTS
-    ]
+    try:
+        docs = [
+            Document(page_content=d["content"], metadata={"source": d["source"]})
+            for d in PORTFOLIO_DOCUMENTS
+        ]
 
-    splitter = RecursiveCharacterTextSplitter(chunk_size=500, chunk_overlap=50)
-    chunks = splitter.split_documents(docs)
+        splitter = RecursiveCharacterTextSplitter(chunk_size=500, chunk_overlap=50)
+        chunks = splitter.split_documents(docs)
 
-    vectorstore = FAISS.from_documents(chunks, embeddings)
+        vectorstore = FAISS.from_documents(chunks, embeddings)
 
-    index_path = Path(settings.faiss_index_path)
-    index_path.mkdir(parents=True, exist_ok=True)
-    vectorstore.save_local(str(index_path))
+        index_path = Path(settings.faiss_index_path)
+        index_path.mkdir(parents=True, exist_ok=True)
+        vectorstore.save_local(str(index_path))
 
-    return vectorstore
+        return vectorstore
+    except Exception:
+        return None
 
 
 def get_vectorstore():
@@ -53,14 +56,17 @@ def get_vectorstore():
     if not embeddings:
         return None
 
-    index_path = Path(settings.faiss_index_path)
-    if index_path.exists() and (index_path / "index.faiss").exists():
-        _vectorstore = FAISS.load_local(
-            str(index_path),
-            embeddings,
-            allow_dangerous_deserialization=True,
-        )
-    else:
-        _vectorstore = build_vectorstore()
+    try:
+        index_path = Path(settings.faiss_index_path)
+        if index_path.exists() and (index_path / "index.faiss").exists():
+            _vectorstore = FAISS.load_local(
+                str(index_path),
+                embeddings,
+                allow_dangerous_deserialization=True,
+            )
+        else:
+            _vectorstore = build_vectorstore()
+    except Exception:
+        _vectorstore = None
 
     return _vectorstore

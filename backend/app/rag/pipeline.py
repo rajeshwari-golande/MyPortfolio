@@ -67,14 +67,14 @@ def _fallback_response(question: str) -> ChatResponse:
 
 
 def get_rag_response(message: str, history: list[ChatMessage]) -> ChatResponse:
-    if not settings.gemini_api_key:
-        return _fallback_response(message)
-
-    vectorstore = get_vectorstore()
-    if not vectorstore:
-        return _fallback_response(message)
-
     try:
+        if not settings.gemini_api_key:
+            return _fallback_response(message)
+
+        vectorstore = get_vectorstore()
+        if not vectorstore:
+            return _fallback_response(message)
+
         docs = vectorstore.similarity_search(message, k=4)
         context = "\n\n".join(
             f"[{doc.metadata.get('source', 'Unknown')}]: {doc.page_content}"
