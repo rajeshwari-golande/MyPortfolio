@@ -1,4 +1,8 @@
-const API_BASE = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
+const PRODUCTION_API = "https://myportfolio-api-r1vj.onrender.com";
+
+const API_BASE =
+  process.env.NEXT_PUBLIC_API_URL ??
+  (process.env.NODE_ENV === "production" ? PRODUCTION_API : "http://localhost:8000");
 
 export interface BlogPost {
   id: number;
