@@ -7,19 +7,23 @@ from langchain_community.vectorstores import FAISS
 from langchain_google_genai import GoogleGenerativeAIEmbeddings
 from langchain.schema import Document
 
-from app.config import settings
+from app.config import settings, effective_gemini_api_key
 from app.rag.documents import PORTFOLIO_DOCUMENTS
 
 _vectorstore = None
 
 
 def _get_embeddings():
-    if not settings.gemini_api_key:
+    api_key = effective_gemini_api_key()
+    if not api_key:
         return None
-    return GoogleGenerativeAIEmbeddings(
-        model="models/embedding-001",
-        google_api_key=settings.gemini_api_key,
-    )
+    try:
+        return GoogleGenerativeAIEmbeddings(
+            model="models/embedding-001",
+            google_api_key=api_key,
+        )
+    except Exception:
+        return None
 
 
 def build_vectorstore():

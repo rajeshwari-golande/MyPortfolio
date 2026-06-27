@@ -13,3 +13,9 @@ class Settings(BaseSettings):
 
 
 settings = Settings()
+
+
+def effective_gemini_api_key() -> str:
+    """Only standard Google AI Studio keys (AIza...) work with LangChain."""
+    key = settings.gemini_api_key.strip()
+    return key if key.startswith("AIza") else ""

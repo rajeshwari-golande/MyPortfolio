@@ -1,7 +1,7 @@
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain.prompts import ChatPromptTemplate
 
-from app.config import settings
+from app.config import effective_gemini_api_key
 from app.rag.indexer import get_vectorstore
 from app.rag.documents import PORTFOLIO_DOCUMENTS
 from app.schemas import ChatCitation, ChatMessage, ChatResponse
@@ -68,7 +68,8 @@ def _fallback_response(question: str) -> ChatResponse:
 
 def get_rag_response(message: str, history: list[ChatMessage]) -> ChatResponse:
     try:
-        if not settings.gemini_api_key:
+        api_key = effective_gemini_api_key()
+        if not api_key:
             return _fallback_response(message)
 
         vectorstore = get_vectorstore()
@@ -83,7 +84,7 @@ def get_rag_response(message: str, history: list[ChatMessage]) -> ChatResponse:
 
         llm = ChatGoogleGenerativeAI(
             model="gemini-2.0-flash",
-            google_api_key=settings.gemini_api_key,
+            google_api_key=api_key,
             temperature=0.3,
         )
 

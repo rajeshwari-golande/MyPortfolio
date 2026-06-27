@@ -3,7 +3,7 @@ from contextlib import asynccontextmanager
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from app.config import settings
+from app.config import settings, effective_gemini_api_key
 from app.database import engine, Base, SessionLocal
 from app.routers import blog, contact, chat
 from app.seed import seed_blog_posts
@@ -19,7 +19,7 @@ async def lifespan(app: FastAPI):
     finally:
         db.close()
 
-    if settings.gemini_api_key:
+    if effective_gemini_api_key():
         try:
             build_vectorstore()
         except Exception:
