@@ -18,8 +18,8 @@ export default function About() {
       <div className="section-container">
         <SectionHeader
           label="About Me"
-          title="Engineering Identity"
-          subtitle="Focused on building production-grade systems at the intersection of backend engineering and AI."
+          title="Engineering with Purpose"
+          subtitle="Building reliable systems at the intersection of backend engineering and AI — learning deeply, shipping thoughtfully, and aiming to create technology that serves people and the world."
         />
 
         <div className="grid lg:grid-cols-3 gap-8">

@@ -11,10 +11,10 @@ export const personalInfo = {
 
 export const aboutContent = {
   paragraphs: [
-    "I am a Computer Engineering graduate from Pimpri Chinchwad College of Engineering (PCCOE) with a strong foundation in software engineering, backend development, and artificial intelligence. My engineering journey has been driven by a passion for building systems that are reliable, scalable, and production-ready.",
-    "My core expertise lies in Python backend development using FastAPI, designing RESTful APIs, implementing authentication systems, and working with PostgreSQL databases. I combine this with AI/ML engineering skills — building RAG pipelines, integrating LLMs, and deploying ML models into production environments.",
-    "Through internships at PTC and ACTDBI, I gained hands-on experience in MLOps, data analytics, and enterprise software development. I am particularly interested in FinTech, backend infrastructure, and AI-powered product development — building for domains where reliability, scale, and intelligent systems matter.",
-    "My career goal is to contribute as a backend or AI/ML engineer on teams that ship high-impact, production-grade systems — from API design and database optimization to cloud deployment and automated ML pipelines.",
+    "I am a Computer Engineering graduate from Pimpri Chinchwad College of Engineering (PCCOE), drawn to software not just as a craft, but as a way to build things that last and serve people well. I care deeply about systems that are reliable, scalable, and production-ready — because technology only creates real value when it works under pressure.",
+    "I build primarily with Python and FastAPI: designing RESTful APIs, authentication, and PostgreSQL-backed data layers. Alongside that, I explore AI/ML engineering — RAG pipelines, LLM integration, and bringing models into real environments. Every project is a chance to learn how better engineering turns ideas into systems people can trust.",
+    "Internships at PTC and ACTDBI taught me how MLOps, data analytics, and enterprise software come together in practice. Those experiences sharpened my curiosity for FinTech, backend infrastructure, and AI-powered products — spaces where thoughtful design can improve how people access information, make decisions, and build for the future.",
+    "My goal is to grow as a backend and AI/ML engineer who ships meaningful, production-grade systems — and to use that craft in service of something larger: contributing to technology that advances knowledge, expands opportunity, and leaves the world a little better than I found it.",
   ],
 };
 
