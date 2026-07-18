@@ -3,7 +3,7 @@ export const personalInfo = {
   title: "Python Backend Engineer | AI/ML Engineer | DevOps Enthusiast",
   summary:
     "Building scalable backend systems, AI-powered applications, and cloud-native solutions using Python, FastAPI, PostgreSQL, Docker, AWS, and LLM technologies.",
-  email: "rajeshwari.golande@email.com",
+  email: "rajeshwari.golande22@pccoepune.org",
   github: "https://github.com/rajeshwari-golande",
   linkedin: "https://linkedin.com/in/rajeshwari-golande",
   graduationYear: 2026,

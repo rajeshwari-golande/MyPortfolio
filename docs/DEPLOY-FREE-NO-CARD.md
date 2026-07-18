@@ -45,6 +45,9 @@ Deploy the full portfolio without Oracle Cloud or a credit card.
 | `DATABASE_URL` | Neon connection string from Step 2 |
 | `GEMINI_API_KEY` | From [Google AI Studio](https://aistudio.google.com/apikey) |
 | `CORS_ORIGINS` | Your Vercel URL, e.g. `https://your-app.vercel.app` |
+| `CONTACT_TO_EMAIL` | Your real inbox (e.g. college or Gmail) |
+| `WEB3FORMS_ACCESS_KEY` | Free key from [web3forms.com](https://web3forms.com) *(easiest)* |
+| `RESEND_API_KEY` | Optional alternative from [resend.com](https://resend.com) |
 
 5. Wait for deploy (~5–10 min first time)
 6. Save your API URL: `https://myportfolio-api.onrender.com`
